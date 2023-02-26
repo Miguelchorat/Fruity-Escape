@@ -1,0 +1,63 @@
+<!DOCTYPE html>
+<html lang="es">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="assets/sass/main.sass">
+    <link  rel="icon"   href="./assets/img/logo.svg" type="image/png" />
+    <title>Fruity Escape</title>
+</head>
+
+<body>
+    <div class="contenedor">
+        <video class="contenedor__video" controls autoplay loop muted>
+            <source src="assets/video/video.mp4" type="video/mp4">
+            <source src="assets/video/video.webm" type="video/webm">
+            Tu navegador no soporta los formatos de vídeo
+        </video>
+        <div class="contenedor__opacidad"></div>
+    </div>
+    <header class="encabezado">
+        <nav class="encabezado__nav">
+            <ul class="encabezado__nav__listado">
+                <li class="encabezado__nav__listado__item"><a href="#inicio"
+                        class="encabezado__nav__listado__item__enlace">INICIO</a></li>
+                <li class="encabezado__nav__listado__item"><a href="#personajes"
+                        class="encabezado__nav__listado__item__enlace">PERSONAJES</a></li>
+                <li class="encabezado__nav__listado__item"><a href="#mapas"
+                        class="encabezado__nav__listado__item__enlace">MAPAS</a></li>
+            </ul>
+        </nav>
+    </header>
+    <main class="principal">
+        <section id="inicio" class="principal__seccion principal__seccion--inicio">
+            <h2 class="principal__seccion__titulo">FRUITY ESCAPE</h2>
+            <p class="principal__seccion__resumen">Lorem ipsum dolor sit amet consectetur adipisicing elit. Unde quas ratione eligendi, animi possimus minus
+                dignissimos dicta illum a? Vel soluta accusamus tempora, totam eos a asperiores dignissimos eius
+                quisquam qui molestias distinctio odio laudantium consectetur reiciendis optio maxime temporibus dolores
+                facere corporis ipsum quis. Impedit sint quaerat placeat laborum nihil aliquam molestiae inventore,
+                quisquam optio eos?</p>
+        </section>
+        <section id="personajes" class="principal__seccion">
+            <h2 class="principal__seccion__titulo">PERSONAJES</h2>
+        </section>
+        <section id="mapas" class="principal__seccion">
+            <h2 class="principal__seccion__titulo">MAPAS</h2>
+        </section>
+    </main>
+
+    <footer class="pie">
+        <nav class="pie__nav">
+            <ul class="pie__nav__listado">
+                <li class="pie__nav__listado__item"><a class="pie__nav__listado__item__enlace">EJEMPLO</a></li>
+                <li class="pie__nav__listado__item"><a class="pie__nav__listado__item__enlace">EJEMPLO 2</a></li>
+                <li class="pie__nav__listado__item"><a class="pie__nav__listado__item__enlace">EJEMPLO 3</a>
+                </li>
+            </ul>
+        </nav>
+    </footer>
+</body>
+
+</html>

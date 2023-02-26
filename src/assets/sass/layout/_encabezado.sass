@@ -1,0 +1,40 @@
+.encabezado
+    width: 100%  
+    min-height: $XL
+    display: flex    
+    position: fixed
+    top: 0
+    left: 0    
+
+    &__nav
+        height: 100%
+        width: 100%
+        display: flex
+        flex-direction: row
+        justify-content: flex-end
+        justify-items: center
+        z-index: 2
+
+        &__listado
+            height: 100%
+            width: 100%
+            max-width: 560px
+            display: flex
+            flex-direction: row
+            gap: $L
+            align-items: center
+            justify-content: flex-end
+            color: $color_claro_primario
+            list-style: none
+            padding-right: $M
+
+            &__item
+                font-family: $fuente_secundaria
+                color: $color_claro_primario   
+                font-size: $S         
+
+                &__enlace
+                    color: $color_claro_primario   
+
+                    &:hover
+                        color: $color_primario
