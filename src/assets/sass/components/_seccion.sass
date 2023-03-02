@@ -1,23 +1,151 @@
 .principal
-    padding: $XL
+
     &__seccion
+        position: relative
         height: 100vh
         width: 100vw
 
-        &--inicio
+        &__contenido
+            height: 100%
+            position: relative
+            padding: $XXXL
             display: flex
             flex-direction: column
-            padding-top: $XXXL
-            padding-left: $XXXL
-            gap: $M
-            width: 40%            
+            align-items: center
 
-        &__titulo
-            font-size: $XL
-            font-family: $fuente_primaria            
-            color: $color_claro_primario
+            &--inicio
+                justify-content: center
 
-        &__resumen
-            font-size: $XS
-            font-family: $fuente_secundaria
-            color: $color_claro_primario
+            &__titulo
+                font-size: 200px
+                font-family: $fuente_primaria
+                color: $color_claro_primario
+                letter-spacing: 6px
+                line-height: 200px
+                text-shadow: $color_claro_secundario 2px 3px
+                align-self: start
+
+            &__logo
+                width: 550px
+                height: 550px
+                position: absolute
+                top: 0
+                bottom: 0
+                left: 55%
+                margin: auto
+                padding: $XXS
+                background: rgba(255, 255, 255, 0.05)
+                border-radius: 25%
+                backdrop-filter: blur(16px)
+                -webkit-backdrop-filter: blur(8px)
+
+            &__subtitulo
+                font-size: $XXL
+                font-family: $fuente_primaria
+                color: $color_claro_primario
+                letter-spacing: 4px
+                text-shadow: $color_oscuro_primario 2px 5px
+                text-align: center
+
+            &__resumen
+                width: 50%
+                font-size: $M
+                font-family: $fuente_secundaria
+                color: $color_claro_primario
+                text-shadow: $color_oscuro_primario 3px 3px 
+                align-self: start           
+
+            &__lista
+                list-style: none
+                display: flex
+                flex-direction: row  
+                align-self: start
+                padding-left: 7.5%
+
+                &__elemento
+                    color: $color_oscuro_primario
+                    font-family: $fuente_secundaria
+                    font-weight: bold
+                    $font-size: $XS
+                    background-color: $color_claro_secundario
+                    padding: $XS
+                    opacity: $opacidad
+                    cursor: pointer
+
+                    &--seleccionado
+                        background: $color_primario
+                        color: $color_claro_primario
+                        opacity: 1
+
+                    &--seleccionado2
+                        background: green
+                        color: $color_claro_primario
+                        opacity: 1
+
+            &__contenedor
+                height: 100%
+                width: 85%
+                background: $color_claro_primario
+                border-radius: 0 5px 5px 5px
+                box-shadow: rgba(255, 255, 255, 0.2) 0px 7px 29px 0px
+
+                &__articulo
+                    height: 100%
+                    display: none
+                    padding: $XXL
+                    grid-template-columns: 1fr 1fr
+                    grid-template-areas: "img titulo" "img texto"
+                    grid-gap: 20px
+                    align-items: center
+                    position: relative
+
+                    &--activo
+                        display: grid
+
+                    &__personaje
+                        height: 450px
+                        width: 450px
+                        grid-area: img
+                        justify-self: center
+                        cursor: pointer
+                        
+                        &:hover
+                            transform: scale(1.05)
+
+                    &__titulo
+                        font-family: $fuente_secundaria
+                        font-size: $L
+                        grid-area: titulo
+                        align-self: flex-end
+
+                    &__texto
+                        font-family: $fuente_secundaria
+                        font-size: $S
+                        grid-area: texto
+                        align-self: flex-start
+
+        &__contenedor
+            position: absolute
+            top: 0
+            left: 0
+            height: 100%
+            width: 100%
+            overflow: hidden
+            z-index: -1
+
+            &__video
+                height: 100%
+                width: 100%
+                object-fit: cover
+
+            &__img
+                height: 100%
+                width: 100%
+
+            &__opacidad
+                position: absolute
+                top: 0
+                left: 0
+                height: 100%
+                width: 100%
+                background-color: rgba(0, 0, 0, 0.6)
