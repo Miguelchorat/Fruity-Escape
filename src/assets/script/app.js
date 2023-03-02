@@ -1,22 +1,44 @@
 //Eventos de TAB
 
+// Obtiene el primer elemento de la lista de pestañas del menú
 const primerTabMenu = document.querySelectorAll(".principal__seccion__contenido__lista__elemento")[0];
+
+// Obtiene el segundo elemento de la lista de pestañas del menú
 const segundoTabMenu = document.querySelectorAll(".principal__seccion__contenido__lista__elemento")[1];
+
+// Obtiene el primer artículo del contenido
 const primerTabContenido = document.querySelectorAll(".principal__seccion__contenido__contenedor__articulo")[0];
+
+// Obtiene el segundo artículo del contenido
 const segundoTabContenido = document.querySelectorAll(".principal__seccion__contenido__contenedor__articulo")[1];
 
-
+// Añade un event listener que escucha el evento "click" en el primer elemento de la lista de pestañas del menú
 primerTabMenu.addEventListener("click", () => {
+  // Agrega la clase "principal__seccion__contenido__contenedor__articulo--activo" al primer artículo del contenido
   primerTabContenido.classList.add("principal__seccion__contenido__contenedor__articulo--activo");
+
+  // Agrega la clase "principal__seccion__contenido__lista__elemento--seleccionado" al primer elemento de la lista de pestañas del menú
   primerTabMenu.classList.add("principal__seccion__contenido__lista__elemento--seleccionado");
+
+  // Remueve la clase "principal__seccion__contenido__contenedor__articulo--activo" del segundo artículo del contenido
   segundoTabContenido.classList.remove("principal__seccion__contenido__contenedor__articulo--activo");
+
+  // Remueve la clase "principal__seccion__contenido__lista__elemento--seleccionado2" del segundo elemento de la lista de pestañas del menú
   segundoTabMenu.classList.remove("principal__seccion__contenido__lista__elemento--seleccionado2");
 });
 
+// Añade un event listener que escucha el evento "click" en el segundo elemento de la lista de pestañas del menú
 segundoTabMenu.addEventListener("click", () => {
+  // Agrega la clase "principal__seccion__contenido__contenedor__articulo--activo" al segundo artículo del contenido
   segundoTabContenido.classList.add("principal__seccion__contenido__contenedor__articulo--activo");
+
+  // Agrega la clase "principal__seccion__contenido__lista__elemento--seleccionado2" al segundo elemento de la lista de pestañas del menú
   segundoTabMenu.classList.add("principal__seccion__contenido__lista__elemento--seleccionado2");
+
+  // Remueve la clase "principal__seccion__contenido__contenedor__articulo--activo" del primer artículo del contenido
   primerTabContenido.classList.remove("principal__seccion__contenido__contenedor__articulo--activo");
+
+  // Remueve la clase "principal__seccion__contenido__lista__elemento--seleccionado" del primer elemento de la lista de pestañas del menú
   primerTabMenu.classList.remove("principal__seccion__contenido__lista__elemento--seleccionado");
 });
 
