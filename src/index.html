@@ -91,13 +91,21 @@
         <section id="mapas" class="principal__seccion">
             <div class="principal__seccion__contenido">
                 <h2 class="principal__seccion__contenido__subtitulo">MAPAS</h2>
-                <div class="principal__seccion__contenido__carrusel">
-                    <img class="principal__seccion__contenido__carrusel__img" src="assets/img/mapa_miguel.jpg"
-                        alt="Mapa principal">
-                    <img class="principal__seccion__contenido__carrusel__img" src="assets/img/mapa_dani.jpg"
-                        alt="Mapa secundario">
-                    <img class="principal__seccion__contenido__carrusel__img" src="assets/img/mapa_sergio.jpg"
-                        alt="Mapa terciario">
+                <div class="principal__seccion__contenido__content">
+                    <div class="principal__seccion__contenido__carrusel">                    
+                        <picture class="picture">
+                            <source media="(max-width: 900px)" srcset="assets/img/mapa_miguel_720p.jpg">
+                            <img class="principal__seccion__contenido__carrusel__img" src="assets/img/mapa_miguel.jpg" alt="Mapa principal">
+                        </picture>
+                        <picture class="picture">
+                            <source media="(max-width: 900px)" srcset="assets/img/mapa_dani_720p.jpg">
+                            <img class="principal__seccion__contenido__carrusel__img" src="assets/img/mapa_dani.jpg" alt="Mapa secundario">
+                        </picture>
+                        <picture class="picture">
+                            <source media="(max-width: 900px)" srcset="assets/img/mapa_sergio_720p.jpg">
+                            <img class="principal__seccion__contenido__carrusel__img" src="assets/img/mapa_sergio.jpg" alt="Mapa terciario">
+                        </picture>
+                    </div>
                 </div>
                 <div class="principal__seccion__contenido__control">
                     <input type="radio" name="mapas" class="principal__seccion__contenido__control__radio" checked>

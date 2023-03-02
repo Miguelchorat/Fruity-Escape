@@ -16,6 +16,10 @@
             &--inicio
                 justify-content: center
 
+            @media (max-width: 500px)                
+                padding: 0
+                height: 95%
+
             &__titulo
                 font-size: 200px
                 font-family: $fuente_primaria
@@ -24,6 +28,18 @@
                 line-height: 200px
                 text-shadow: $color_claro_secundario 2px 3px
                 align-self: start
+
+                @media (max-width: 500px)
+                    padding: $XS
+                    width: 100%
+                    font-size: 120px
+                    line-height: 120px
+                
+                @media (max-width: 380px)
+                    padding: $XS
+                    width: 100%
+                    font-size: 100px
+                    line-height: 100px
 
             &__logo
                 width: 550px
@@ -39,6 +55,27 @@
                 backdrop-filter: blur(16px)
                 -webkit-backdrop-filter: blur(8px)
 
+                @media (max-width: 1200px)
+                    width: 350px
+                    height: 350px
+                    left: 60%                    
+
+                @media (max-width: 500px)
+                    width: 200px
+                    height: 200px
+                    top: 80%
+                    bottom: 0
+                    left: 0
+                    right: 0
+
+                @media (max-width: 380px)
+                    width: 150px
+                    height: 150px
+                    top: 70%
+                    bottom: 0
+                    left: 0
+                    right: 0
+
             &__subtitulo
                 font-size: $XXL
                 font-family: $fuente_primaria
@@ -53,7 +90,12 @@
                 font-family: $fuente_secundaria
                 color: $color_claro_primario
                 text-shadow: $color_oscuro_primario 3px 3px 
-                align-self: start           
+                align-self: start    
+
+                @media (max-width: 500px)
+                    padding: $XS
+                    width: 100%
+                    font-size: $S     
 
             &__lista
                 list-style: none
@@ -87,7 +129,7 @@
                 width: 85%
                 background: $color_claro_primario
                 border-radius: 0 5px 5px 5px
-                box-shadow: rgba(255, 255, 255, 0.2) 0px 7px 29px 0px
+                box-shadow: rgba(255, 255, 255, 0.2) 0px 7px 29px 0px            
 
                 &__articulo
                     height: 100%
@@ -97,10 +139,18 @@
                     grid-template-areas: "img titulo" "img texto"
                     grid-gap: 20px
                     align-items: center
-                    position: relative
+                    position: relative                    
+
+                    @media (max-width: 1000px)
+                        padding: $XS
 
                     &--activo
                         display: grid
+
+                        @media (max-width: 1000px)
+                            grid-template-columns: 1fr
+                            grid-template-areas: "img" "titulo" "texto"
+                            grid-gap: 0px
 
                     &__personaje
                         height: 450px
@@ -108,6 +158,11 @@
                         grid-area: img
                         justify-self: center
                         cursor: pointer
+
+                        @media (max-width: 1000px)
+                            height: 250px
+                            width: 250px
+                            align-self: start
                         
                         &:hover
                             transform: scale(1.05)
@@ -124,6 +179,9 @@
                         grid-area: texto
                         align-self: flex-start
 
+                        @media (max-width: 390px)
+                            font-size: $XS
+
         &__contenedor
             position: absolute
             top: 0
@@ -132,6 +190,7 @@
             width: 100%
             overflow: hidden
             z-index: -1
+            min-width: 1500px
 
             &__video
                 height: 100%

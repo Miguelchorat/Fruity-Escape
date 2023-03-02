@@ -30,10 +30,18 @@
             list-style: none
             padding-right: $M
 
+            @media (max-width: 500px)
+                gap: $XS
+                padding: 0
+                justify-content: center
+
             &__item
                 font-family: $fuente_secundaria
                 color: $color_claro_primario
                 font-size: $S
+
+                @media (max-width: 360px)
+                    font-size: $XS                    
 
                 &__enlace
                     color: $color_claro_primario
@@ -42,3 +50,5 @@
                         color: $color_primario
                     &:hover
                         opacity: $opacidad
+    
+        

@@ -1,16 +1,25 @@
 .principal__seccion__contenido
 
+    &__content
+        height: 100%
+        overflow: hidden        
+
+        @media (max-width: 500px)
+            margin-top: $XL
+            overflow: hidden
+            height: 35%
+            width: 95%
+
     &__carrusel
         display: flex
         flex-direction: row        
         margin: 0 auto
         width: 300%
-        height: 85%
+        height: 100%
         transition: 0.5s
 
         &__img
-            width: calc(100% / 3)
-            height: auto
+            width: 100%            
             object-fit: contain
             transform: translateX(0%)
 
@@ -32,3 +41,8 @@
 
             &:checked
                 background: $color_primario
+
+.picture
+    width: calc(100% / 3)
+    height: 100%
+    overflow: hidden
